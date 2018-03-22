@@ -184,16 +184,16 @@ So basically someone have to copy and paste the instructions right in there. Thi
 
 ## Get the project (Visual Studio)
 1. Clone the repository
-```
+    ```
     git clone "https://github.com/Seng3694/IL-Code-Weaver-INotifyPropertyChanged-Example" ILCodeWeaver
-```
+    ```
 
 2. Open the `ILCodeWeaving.sln` Solution file
 3. Make sure TestApp is the StartUp project
 4. Notice the post-build task in the TestApp project. This will execute the Weaver.exe with the TestApp.exe path as an argument
-```
+    ```
     "$(SolutionDir)Weaver\bin\$(ConfigurationName)\Weaver.exe" "$(TargetPath)"
-```
+    ```
 5. Notice the project reference from TestApp to Weaver. This ensures that the Weaver.exe is built before the TestApp will be built
 6. Running the TestApp and typing something in the left TextBox should look like this:
 ![Test Run][2]
